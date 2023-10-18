@@ -1,13 +1,51 @@
 @import url('@scania/tegel/dist/tegel/tegel.css');
+@import url('./reset.css');
 
-
-html,
-body,
-.App {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
+.banner-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
+
+.container {
+    padding-top: 132px;
+}
+
+.container.no-banner {
+    padding-top: 64px;
+}
+
+
+.side-menu {
+    position: sticky;
+    top: 132px;
+}
+
+.side-menu.no-banner {
+    top: 64px;
+}
+
+tds-side-menu-close-button {
+  display: none;
+}
+
+main {
+    flex: 1;
+    text-align: center;
+    margin: auto;
+}
+
+@media (max-width: 992px) {
+  .side-menu {
+    position: fixed;
+    top: 68px;
+  }
+  .side-menu.no-banner {
+    top: 0;
+  }
+  tds-side-menu-close-button {
+    display: block;
+  }
+}
+
+
