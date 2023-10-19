@@ -8,7 +8,7 @@ const AboutPage = () => {
                 This is a skeleton project build using{" "}
                 <TdsLink>
                     <a href="https://npmjs.com/package/@scania/tegel-react">
-                        @scania/tegel
+                        @scania/tegel-react
                     </a>
                     . It also includes a basic setup of{" "}
                     <TdsLink>
