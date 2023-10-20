@@ -1,6 +1,12 @@
 @import url('@scania/tegel/dist/tegel/tegel.css');
 @import url('./reset.css');
 
+:root {
+  --header-height: 64px;
+  --banner-height: 68px;
+  --header-and-banner-height: calc(var(--header-height) + var(--banner-height));
+}
+
 .banner-header {
     position: fixed;
     top: 0;
@@ -8,21 +14,23 @@
 }
 
 .container {
-    padding-top: 132px;
+    padding-top: var(--header-and-banner-height);
 }
 
 .container.no-banner {
-    padding-top: 64px;
+    padding-top: var(--header-height);
 }
 
 
 .side-menu {
     position: sticky;
-    top: 132px;
+    top: calc(var(--header-and-banner-height));
+    height: calc(100vh - var(--header-and-banner-height));
 }
 
 .side-menu.no-banner {
-    top: 64px;
+    top: var(--header-height);
+    height: calc(100vh - var(--header-height));
 }
 
 tds-side-menu-close-button {
@@ -38,7 +46,7 @@ main {
 @media (max-width: 992px) {
   .side-menu {
     position: fixed;
-    top: 68px;
+    top: var(--banner-height);
   }
   .side-menu.no-banner {
     top: 0;
