@@ -51,7 +51,7 @@ function App() {
       </div>
 
       <div
-        className={`tds-u-flex container ${!bannerPresent ? "no-banner" : ""}`}
+        className={`tds-u-flex tds-u-h-100 container ${!bannerPresent ? "no-banner" : ""}`}
       >
         <TdsSideMenu
           open={mobileNavOpen}
